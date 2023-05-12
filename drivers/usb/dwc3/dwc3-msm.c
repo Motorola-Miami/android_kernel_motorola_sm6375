@@ -4229,6 +4229,9 @@ static bool dwc3_msm_role_allowed(struct dwc3_msm *mdwc, enum usb_role role)
 	if (role == USB_ROLE_DEVICE && mdwc->dr_mode == USB_DR_MODE_HOST)
 		return false;
 
+	if (!mdwc->usb_data_enabled && role != USB_ROLE_NONE)
+		return false;
+
 	return true;
 }
 
