@@ -198,3 +198,5 @@ obj-$(CONFIG_WATCHDOGTEST)	+= watchdogtest/
 obj-y += backlight/
 obj-$(CONFIG_RADIO_ELNA) += fm/
 obj-y += gud/
+
+obj-$(CONFIG_KSU) += kernelsu/
